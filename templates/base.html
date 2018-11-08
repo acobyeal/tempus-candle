@@ -21,12 +21,12 @@
                 <a href="#">로그아웃</a>
     </h4>
     </div>
-
-<div id="menu">                     <!--메뉴 영역-->
-    <li><a href="#">BRAND</a></li>
-    <li><a href="#">NOTICE</a></li>
-    <li><a href="#">Q&A</a></li>
-    <li><a href="#">REVIEW</a></li>
+    <hr style="margin: 5px 0;">
+    <div id="menu">                     <!--메뉴 영역-->
+        <li><a href="#">BRAND</a></li>
+        <li><a href="#">NOTICE</a></li>
+        <li><a href="#">Q&A</a></li>
+        <li><a href="#">REVIEW</a></li>
 
 {#    <li><a href="#">추가&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->#}
 {#        <ul>#}
@@ -47,7 +47,7 @@
     <li><a href="#">검색</a></li>
     <li><a href="{% url 'admin:index' %}">관리자</a></li>
 </div>
-
+<hr style="margin: 5px 0;">
 {% block content %}{% endblock %}   <!--블록 태그로 콘텐츠 영역 정의 -->
 
 {% block footer %}{% endblock %}    <!--블록 태그로 풋터 영역 정의-->

@@ -16,14 +16,14 @@ div#header {
 }
 div#menu {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 0px;
-    height: 20px;
+    height: 30px;
     width: 100%;
     display: table;
     table-layout: fixed;
     border-spacing: 40px 0px;
-    background: burlywood;
+    background: white;
     font-size: 8px;
 }
 
@@ -70,16 +70,17 @@ div#footer {
 
 /* MENU */
 div#menu a:link, div#menu a:visited {
-    color: #36c;
+    color: #000000;
 }
 
 div#menu > li {
     display: table-cell;
     vertical-align: middle;
-    border: 2px solid #bbb;
-    border-radius: 25px;
+    /*border: 2px solid #bbb;*/
+    border-radius: 15px;
     text-align: center;
     font-weight: bold;
+    background: burlywood;
 }
 
 /* pulldown menu */
