@@ -2,7 +2,10 @@ body {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     font-size: 12px;
 }
-
+body#header a {
+    text-decoration: none;
+    color:#000000;
+}
 /* PAGE STRUCTURE */
 div#header {
     position: absolute;
@@ -48,6 +51,7 @@ div#footer {
     vertical-align: middle;
     height:50px;
     padding-left:20px;
+    border:none;
 }
 .maintitle {
     display: table-cell;
