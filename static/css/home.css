@@ -11,14 +11,15 @@ div#homeimg {
     padding: 10px 0 1px 0;
 }
 div#home_text p{
-    /*margin: auto;*/
-    text-align: center;
+    margin: auto;
+    /*text-align: center;*/
 }
-/*div#products{*/
+div#products{
     /*position: absolute;*/
-/*}*/
+    display:inline;
+}
 div.product{
     /*제품들을 수평으로 정렬하기 위한 작업!*/
-    /*text-align:center;*/
-    display:inline;
+    text-align:center;
+
 }
