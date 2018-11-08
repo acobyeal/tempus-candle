@@ -6,28 +6,20 @@
 
 {% load staticfiles %}  <!--정적 파일인 css 연결하기 위하여, staticfiles를 로드-->
 <!--스타일시트 css/base.css 작성이 필요함-->
-{#{% block extrastyle %}{% static "css/base.css" %}{% endblock %}#}
 <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
 <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />
-
-{#{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" #}
-
-
-
 
 </head>
 
 <body>              <!--바디 영역은 4 영역(헤더/메뉴/콘텐츠/풋터)으로 구성-->
-{% block header %}
-    <div id="header_">
+    <div id="header">
                 <!--헤더 영역-->
-    <h2 class="maintitle"><a href="{% url 'home' %}"><img src="{% static 'img/tempus_logo.jpg' %}" style="height:20px;"/>Tempus Candle</a></h2>
+    <h1 class="maintitle"><a href="{% url 'home' %}"><img src="{% static 'img/tempus_logo.jpg' %}" style="height:50px;"/>Tempus Candle</a></h1>
     <h4 class="welcome">반갑습니다. <a href="#">acobyeal</a>님.  /
                 <a href="#">비밀번호 변경</a> /
                 <a href="#">로그아웃</a>
-    </h4>
+    </h4>z
     </div>
-{% endblock %}
 
 <div id="menu">                     <!--메뉴 영역-->
     <li><a href="#">BRAND</a></li>
