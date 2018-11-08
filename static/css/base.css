@@ -139,28 +139,6 @@ div#footer {
     display: block;
   }
 }
-
-/*div#menu a:link, div#menu a:visited {*/
-    /*color: #000000;*/
-/*}*/
-
-/*div#menu > li {*/
-    /*display: table-cell;*/
-    /*vertical-align: middle;*/
-    /*!*border: 2px solid #bbb;*!*/
-    /*text-align: center;*/
-    /*font-weight: bold;*/
-    /*background: white;*/
-/*}*/
-/*div#menu > li a:visited {*/
-    /*display: table-cell;*/
-    /*vertical-align: middle;*/
-    /*!*border: 2px solid #bbb;*!*/
-    /*text-align: center;*/
-    /*font-weight: bold;*/
-    /*background: burlywood;*/
-/*}*/
-
 /* pulldown menu */
 div#menu li  ul {
     display:none;

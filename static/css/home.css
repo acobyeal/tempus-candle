@@ -6,6 +6,7 @@ div#content_home {
 }
 
 div#homeimg {
+    text-align: center;
     background: white;
     padding: 10px 0 1px 0;
 }
