@@ -73,26 +73,88 @@ div#footer {
 }
 
 /* MENU */
-div#menu a:link, div#menu a:visited {
-    color: #000000;
+#menu,#menu ul,#menu ul li,#menu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#menu {
+  border-bottom: 1px solid #333333;
+  padding: 0 5px;
+  width: auto;
+  font-family: 'Roboto Slab', serif;
+  background: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+#menu:after,#menu ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#menu ul li {
+  display: inline-block;
+}
+#menu.align-right ul li {
+  float: right;
+}
+#menu.align-center ul {
+  text-align: center;
+}
+#menu ul li a {
+  font-size: 14px;
+  padding: 15px;
+  text-decoration: none;
+  color: burlywood;
+}
+#menu ul li:hover a,
+#menu ul li a:hover,
+#menu ul li.active a {
+  color: #333333;
+}
+@media all and (max-width: 640px) {
+  #menu {
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+  }
+  #menu ul li,
+  #menu.align-center,
+  #menu.align-right {
+    display: block;
+  }
 }
 
-div#menu > li {
-    display: table-cell;
-    vertical-align: middle;
-    /*border: 2px solid #bbb;*/
-    text-align: center;
-    font-weight: bold;
-    background: white;
-}
-div#menu > li a:visited {
-    display: table-cell;
-    vertical-align: middle;
-    /*border: 2px solid #bbb;*/
-    text-align: center;
-    font-weight: bold;
-    background: burlywood;
-}
+/*div#menu a:link, div#menu a:visited {*/
+    /*color: #000000;*/
+/*}*/
+
+/*div#menu > li {*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    /*!*border: 2px solid #bbb;*!*/
+    /*text-align: center;*/
+    /*font-weight: bold;*/
+    /*background: white;*/
+/*}*/
+/*div#menu > li a:visited {*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    /*!*border: 2px solid #bbb;*!*/
+    /*text-align: center;*/
+    /*font-weight: bold;*/
+    /*background: burlywood;*/
+/*}*/
 
 /* pulldown menu */
 div#menu li  ul {
@@ -114,7 +176,7 @@ div#menu li:hover ul {
 
 /* LINK */
 a:link, a:visited {
-    color: #369;
+    color: #000000;
     text-decoration: none;
 }
 

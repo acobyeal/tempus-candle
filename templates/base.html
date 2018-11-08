@@ -2,6 +2,7 @@
 <html lang="ko">    <!--언어는 한국어로 지정--><!---->
 
 <head>              <!--페이지 타이틀과 css 파일 2개를 연결-->
+
 <title>{% block title %}Tempus Candle{% endblock %}</title>
 <!--글씨체(Roboto Slab)사용을 위한 임포트-->
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
@@ -9,7 +10,7 @@
 <!--스타일시트 css/base.css 작성이 필요함-->
 <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
 <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />
-
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>              <!--바디 영역은 4 영역(헤더/메뉴/콘텐츠/풋터)으로 구성-->
@@ -24,32 +25,17 @@
         </h4>
     </div>
     <hr id="hr1"style="margin: 5px 0;">
-    <div id="menu">                     <!--메뉴 영역-->
-        <li><a href="#">BRAND</a></li>
-        <li><a href="#">NOTICE</a></li>
-        <li><a href="#">Q&A</a></li>
-        <li><a href="#">REVIEW</a></li>
-
-{#    <li><a href="#">추가&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->#}
-{#        <ul>#}
-{#            <li><a href="#">책갈피</a></li>#}
-{#            <li><a href="#">게시판</a></li>#}
-{#	        <li><a href="#">사진첩</a></li>#}
-{#        </ul>#}
-{#    </li>#}
-{#    <li><a href="#">편집&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->#}
-{#        <ul>#}
-{#            <li><a href="#">책갈피</a></li>#}
-{#            <li><a href="#">게시판</a></li>#}
-{#	        <li><a href="#">사진첩</a></li>#}
-{#        </ul>#}
-{#    </li>#}
-
-{#    <li><a href="{% url 'blog:post_archive' %}">저장소</a></li>#}
-    <li><a href="#">검색</a></li>
-    <li><a href="{% url 'admin:index' %}">관리자</a></li>
+    <div id="menu">
+        <ul><!--메뉴 영역-->
+            <li><a href="#">BRAND</a></li>
+            <li><a href="#">NOTICE</a></li>
+            <li><a href="#">Q&A</a></li>
+            <li><a href="#">REVIEW</a></li>
+            <li><a href="#">검색</a></li>
+            <li><a href="{% url 'admin:index' %}">관리자</a></li>
+        </ul>
 </div>
-<hr style="margin: 5px 0;">
+
 {% block content %}{% endblock %}   <!--블록 태그로 콘텐츠 영역 정의 -->
 
 {% block footer %}{% endblock %}    <!--블록 태그로 풋터 영역 정의-->
