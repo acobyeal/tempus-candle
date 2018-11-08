@@ -1,4 +1,6 @@
 div#content_home {
+     width: 100%;
+    text-align: center;
     top: 110px;
     left: 110px;
     right: 110px;
@@ -24,12 +26,11 @@ div#imgtext p{
    color: #000000;
     z-index: 900;
 }
-div#home_text_out{
-     width: 100%;
-     text-align: center;
-}
-div#home_text_in{
+div#home_text{
     display: inline-block;
+}
+div#home_text > p{
+     text-align: center;
 }
 div#products{
     width: 100%;
