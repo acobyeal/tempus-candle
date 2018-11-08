@@ -47,7 +47,10 @@ div#footer {
 
 /* HEADER */
 .logo_img{
-    /*display: table-cell;*/
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    border: 0;
     vertical-align: middle;
     height:50px;
     width: 64px;
