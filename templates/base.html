@@ -14,37 +14,37 @@
 <body>              <!--바디 영역은 4 영역(헤더/메뉴/콘텐츠/풋터)으로 구성-->
 
 <div id="header">                   <!--헤더 영역-->
-    <h2 class="maintitle">쉽고 빠른 장고 웹 프로그래밍</h2>
-    <h4 class="welcome">반갑습니다. <a href="#">logistex</a>님.  /
+    <h2 class="maintitle"><a href="{% url 'home' %}">Tempus Candle</a></h2>
+    <h4 class="welcome">반갑습니다. <a href="#">acobyeal</a>님.  /
                 <a href="#">비밀번호 변경</a> /
                 <a href="#">로그아웃</a>
     </h4>
 </div>
 
 <div id="menu">                     <!--메뉴 영역-->
-    <li><a href="#">홈</a></li>
-    <li><a href="#">책갈피</a></li>
-    <li><a href="#">게시판</a></li>
-    <li><a href="#">사진첩</a></li>
+    <li><a href="#">BRAND</a></li>
+    <li><a href="#">NOTICE</a></li>
+    <li><a href="#">Q&A</a></li>
+    <li><a href="#">REVIEW</a></li>
 
-    <li><a href="#">추가&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->
-        <ul>
-            <li><a href="#">책갈피</a></li>
-            <li><a href="#">게시판</a></li>
-	        <li><a href="#">사진첩</a></li>
-        </ul>
-    </li>
-    <li><a href="#">편집&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->
-        <ul>
-            <li><a href="#">책갈피</a></li>
-            <li><a href="#">게시판</a></li>
-	        <li><a href="#">사진첩</a></li>
-        </ul>
-    </li>
+{#    <li><a href="#">추가&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->#}
+{#        <ul>#}
+{#            <li><a href="#">책갈피</a></li>#}
+{#            <li><a href="#">게시판</a></li>#}
+{#	        <li><a href="#">사진첩</a></li>#}
+{#        </ul>#}
+{#    </li>#}
+{#    <li><a href="#">편집&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->#}
+{#        <ul>#}
+{#            <li><a href="#">책갈피</a></li>#}
+{#            <li><a href="#">게시판</a></li>#}
+{#	        <li><a href="#">사진첩</a></li>#}
+{#        </ul>#}
+{#    </li>#}
 
-    <li><a href="#">저장소</a></li>
+{#    <li><a href="{% url 'blog:post_archive' %}">저장소</a></li>#}
     <li><a href="#">검색</a></li>
-    <li><a href="#">관리자</a></li>
+    <li><a href="{% url 'admin:index' %}">관리자</a></li>
 </div>
 
 {% block content %}{% endblock %}   <!--블록 태그로 콘텐츠 영역 정의 -->
