@@ -22,6 +22,7 @@ div#imgtext {
 div#imgtext p{
    font-size: 10px;
    color: #000000;
+    z-index: 900;
 }
 div#home_text{
     width: fit-content;
