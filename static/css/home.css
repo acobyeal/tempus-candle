@@ -10,3 +10,10 @@ div#homeimg {
     padding: 5px 0 1px 0;
     text-align: center;
 }
+div#home_text{
+    text-align:center
+}
+div.products{
+    /*제품들을 수평으로 정렬하기 위한 작업!*/
+    text-align:center
+}

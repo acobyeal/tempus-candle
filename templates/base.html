@@ -3,7 +3,8 @@
 
 <head>              <!--페이지 타이틀과 css 파일 2개를 연결-->
 <title>{% block title %}Tempus Candle{% endblock %}</title>
-
+<!--글씨체(Roboto Slab)사용을 위한 임포트-->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 {% load staticfiles %}  <!--정적 파일인 css 연결하기 위하여, staticfiles를 로드-->
 <!--스타일시트 css/base.css 작성이 필요함-->
 <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
@@ -18,7 +19,7 @@
     <h4 class="welcome">반갑습니다. <a href="#">acobyeal</a>님.  /
                 <a href="#">비밀번호 변경</a> /
                 <a href="#">로그아웃</a>
-    </h4>z
+    </h4>
     </div>
 
 <div id="menu">                     <!--메뉴 영역-->
