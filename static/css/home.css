@@ -8,6 +8,7 @@ div#content_home {
 }
 
 div#homeimg {
+    position:relative;
     width: 100%;
     text-align: center;
     background: white;
@@ -21,11 +22,12 @@ div#homeimg img{
 }
 div#imgtext {
     display: inline-block;
+    position:absolute;
+    bottom:10px;
 }
 div#imgtext p{
    font-size: 10px;
    color: #000000;
-    z-index: 900;
 }
 div#home_text{
     display: inline-block;
