@@ -12,7 +12,6 @@ div#header {
     width: 100%;
     display: table;
     background: white;
-    /*background: cadetblue;*/
 }
 div#menu {
     position: absolute;
@@ -44,6 +43,10 @@ div#footer {
 }
 
 /* HEADER */
+.logo_img{
+    height:50px;
+    padding-left:20px;
+}
 .maintitle {
     display: table-cell;
     vertical-align: middle;
