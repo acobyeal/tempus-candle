@@ -24,13 +24,12 @@ div#imgtext p{
    color: #000000;
     z-index: 900;
 }
-div#home_text{
+div#home_text_out{
     width: fit-content;
     display: inline-block;
 }
-div#home_text p{
-    text-align: center;
-    color:white;
+div#home_text_in{
+    display: inline-block;
 }
 div#products{
     width: 100%;

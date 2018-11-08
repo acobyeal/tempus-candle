@@ -55,7 +55,7 @@ div#footer {
     width: 64px;
     padding-left:20px;
 }
-.maintitle > h1 > a {
+.maintitle > a {
     display: table-cell;
     vertical-align: middle;
     color: saddlebrown;
