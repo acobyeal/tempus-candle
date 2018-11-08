@@ -12,10 +12,11 @@ div#homeimg {
 }
 div#home_text{
     margin: auto;
+    text-align: center;
 }
-div#products{
-    position: absolute;
-}
+/*div#products{*/
+    /*position: absolute;*/
+/*}*/
 div.product{
     /*제품들을 수평으로 정렬하기 위한 작업!*/
     text-align:center;
