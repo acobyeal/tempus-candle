@@ -46,10 +46,9 @@ div#footer {
 }
 
 /* HEADER */
-.logo_img{
+.logo_img{    /* 로고이미지랑 이름을 못붙이겠어... 검사에서 보면 border때문이라는데 boerder를 0으로 설정해도 똑같음 */
     display: table-cell;
     margin: 0;
-    padding: 0;
     border: 0;
     vertical-align: middle;
     height:50px;
@@ -59,7 +58,7 @@ div#footer {
 .maintitle {
     display: table-cell;
     vertical-align: middle;
-    color: #000000;
+    color: saddlebrown;
     font-size: 16px;
     font-family: 'Roboto Slab', serif;
 }
@@ -74,8 +73,8 @@ div#footer {
     font-size: 12px;
 }
 
-.welcome a:link, .welcome a:visited {
-    color: white;
+.welcome a:hover{
+    color: gray;
 }
 
 /* MENU */
@@ -123,10 +122,10 @@ div#footer {
   text-decoration: none;
   color: #333333;
 }
-#menu ul li:hover a,
-#menu ul li a:hover,
-#menu ul li.active a {
-    color: burlywood;
+#menu ul li:hover ,
+/*#menu ul li a:hover,*/
+#menu ul li.active {
+    background: burlywood;
 }
 @media all and (max-width: 640px) {
   #menu {
