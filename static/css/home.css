@@ -6,13 +6,27 @@ div#content_home {
 }
 
 div#homeimg {
+    position:relative;
+    display:inline-block;
     text-align: center;
     background: white;
     padding: 10px 0 1px 0;
 }
-div#home_text {
+div#imgtext {
+    position: absolute;
     width: 100%;
-    height: fit-content;
+    height: 100%;
+    text-align:center;
+}
+div#imgtext h4{
+    display: inline-block;
+   font-size: 20px;
+   color: #000000;
+}
+div#imgtext img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 div#home_text p{
     text-align: center;
