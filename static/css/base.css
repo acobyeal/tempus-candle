@@ -14,7 +14,7 @@ div#header {
     background: white;
     /*background: cadetblue;*/
 }
-div#header.maintitle{
+div.maintitle{
     font-family: 'Roboto Slab', serif;
 }
 
