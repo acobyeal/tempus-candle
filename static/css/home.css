@@ -1,6 +1,6 @@
 div#content_home {
     position: absolute;
-    top: 80px;
+    top: 110px;
     left: 110px;
     right: 110px;
 }
@@ -13,7 +13,7 @@ div#home_text{
     margin: auto;
 }
 
-div.products{
+div.product{
     /*제품들을 수평으로 정렬하기 위한 작업!*/
     text-align:center;
 }
