@@ -24,13 +24,12 @@ div#imgtext {
     display: inline-block;
     position:absolute;
     bottom:10px;
+
+}
+div#imgtext p{
     text-align: center;
     color:white;
     font-size: 15pt;
-}
-div#imgtext p{
-   font-size: 10px;
-   color: #000000;
 }
 div#home_text{
     display: inline-block;
