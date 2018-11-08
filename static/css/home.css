@@ -32,11 +32,13 @@ div#home_text p{
     text-align: center;
 }
 div#products{
+    position: absolute;
     width: 100%;
     height: 150px;
     left: 300px;
 }
 div.product{
+    position: absolute;
     display:inline-block;
     height: 120px;
 }
