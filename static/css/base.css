@@ -14,12 +14,6 @@ div#header {
     background: white;
     /*background: cadetblue;*/
 }
-div#maintitle{
-    text-decoration:none;
-    font-family: 'Roboto Slab', serif;
-    color: #000000;
-}
-
 div#menu {
     position: absolute;
     top: 100px;
@@ -57,6 +51,7 @@ div#footer {
     color: #000000;
     font-weight: bold;
     font-size: 16px;
+    font-family: 'Roboto Slab', serif;
 }
 
 .welcome {
