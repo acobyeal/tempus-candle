@@ -8,14 +8,11 @@ div#content_home {
 div#homeimg {
     background: #ddd;
     padding: 5px 0 1px 0;
-    text-align: center;
 }
 div#home_text{
     margin: auto;
 }
-/*div#products{*/
-    /*display:inline;*/
-/*}*/
+
 div.products{
     /*제품들을 수평으로 정렬하기 위한 작업!*/
     text-align:center;
