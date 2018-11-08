@@ -47,11 +47,10 @@ div#footer {
 
 /* HEADER */
 .logo_img{
-    display: table-cell;
+    /*display: table-cell;*/
     vertical-align: middle;
     height:50px;
     padding-left:20px;
-    border:none;
 }
 .maintitle {
     display: table-cell;
