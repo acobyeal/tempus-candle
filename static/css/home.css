@@ -7,6 +7,23 @@ div#content_home {
     right: 110px;
 }
 
+.cycle-slideshow {
+    width: 500px;
+    min-width: 200px;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 0;
+    position: relative;
+}
+.cycle-pager {
+    text-align: center;
+    width: 100px;
+    z-index: 500;
+    position: absolute;
+    top: 2px;
+    overflow: hidden;
+}
+
 div#homeimg {
     position:relative;
     width: 100%;
@@ -24,12 +41,9 @@ div#imgtext {
     display: inline-block;
     position:absolute;
     bottom:10px;
-
 }
 div#imgtext p{
     text-align: center;
-    color:white;
-    font-size: 15pt;
 }
 div#home_text{
     display: inline-block;
@@ -42,7 +56,15 @@ div#products{
     height: 150px;
     left: 300px;
 }
+/*푸터 하단고정 need*/
+div#footer{
+    position: absolute;
+}
+
 div.product{
     display:inline-block;
     height: 120px;
 }
+
+
+

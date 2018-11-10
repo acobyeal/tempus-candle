@@ -9,16 +9,28 @@
 
 {% block content %}                         <!--content 블록 재정의-->
 
-<div id="content_home">     <!--content_home 영역 정의-->
+<div id="content_home" style="text-align:center;">     <!--content_home 영역 정의-->
 
-    <div id="homeimg"> <!--homeimg 영역 정의-->
-        <img src="{% static 'img/tempus_home.jpg' %}"/>
+    <div class="cycle-slideshow" style="text-align:center;"
+        cycle-slideshow data-cycle-loader="wait"
+        data-cycle-timeout="2000"> <!--슬라이드 속도 조절-->
+        <!--중앙정렬 안됨, 추후 이미지 변경할 것-->
+        <div class="cycle-pager" style="align:center;"></div>
+        <img src="{% static 'img/tempus_home.jpg' %}" style="align:center"/>
+        <img src="{% static 'img/candle_blue.png' %}" style="width: 400px; align:center"/>
+        <img src="{% static 'img/candle_cherry.png' %}" style="width: 400px; align:center;"/>
+        <img src="{% static 'img/candle_jasmin.png' %}" style="width: 400px; align:center;"/>
+
         <div id="imgtext">
-            <p>특별한 기념일, 소중한 추억 Tempus와 함께하세요</p>
+            <p style="text-align:center;">특별한 기념일, 소중한 추억 Tempus와 함께하세요</p>
         </div>
+
     </div>
-    <div id="home_text">
-            <p>WHY? 많은 사람들이 TEMPUS CANDLE을 사랑하는가?<br/>
+    <div id="homeimg"> <!--homeimg 영역 정의-->
+
+    </div>
+    <div id="home_text"><!--p태그 글다 가운데정렬이 안돼ㅜㅜㅜ-->
+            <p>WHY? 많은 사람들이 TEMPUS CANDLE을 사랑하는가?<br/> <!--WHY부분 css처리!-->
                 캔들 자체를 세워서 향이 풍부한 필라캔들<br/>
                 용기에 담아 안정감이 충분한 컨테이너캔들<br/>
                 두가지 장점을 모두 갖고있는 TEMPUS CANDLE<br/>
@@ -27,12 +39,12 @@
                 은은하게 퍼지는 향기 후각, 만질 수 있는 촉각<br/>
                 이렇게 총 4가지 감각을 다 사용하는 저장매체</p>
     </div>
-    <hr style="margin: 5px 0;">     <!--소개글 및으로 5px 간격을 두고 수평선 넣기-->
 
 
     <div id="products">
         <div class="product">
             <a href="#"><img src="{% static 'img/candle_cherry.png' %}" style="height:200px;"/></a>
+            <!--아래 텍스트에 링크걸 것-->
             <h5>[템푸스] 하트병캔들 블랙체리</h5>
         </div>
         <div class="product">
@@ -55,33 +67,62 @@
 
 
     <table id="applist">
+        <h4 style="text-align:left;">공지사항</h4>
         <tr>
-        <td><b><i><a href="#">책갈피</a></i><b></td>
-        <td>당신의 책갈피를 등록하고 다른 사람들과 공유할 수 있습니다. 어쩌구 저쩌구. 중얼중얼.</td>
-        <td id="Edit"><i><a href="#">등록</a></i></td>
-        <td id="Edit"><i><a href="#">편집</a></i></td>
+        <td>1</td>
+        <td><a href="#"><b>신상품 출시 예정</b></a></td>
+        <td id="Edit"><i>2018-01-01</i></td>
+        <td id="Edit"><i>운영진</i></td>
         </tr>
 
         <tr>
-        <td><b><i><a href="#">게시판</a></i><b></td>
-        <td>당신의 게시물을 등록하고 다른 사람들과 공유할 수 있습니다. 어쩌구 저쩌구.</td>
-        <td id="Edit"><i><a href="#">등록</a></i></td>
-        <td id="Edit"><i><a href="#">편집</a></i></td>
+        <td>2</td>
+        <td><a href="#"><b>리뷰 적립금 지급</b></a></td>
+        <td id="Edit"><i>2018-01-02</i></td>
+        <td id="Edit"><i>운영진</i></td>
         </tr>
 
         <tr>
-        <td><b><i><a href="#">사진첩</a></i><b></td>
-        <td>당신의 사진을 등록하고 다른 사람들과 공유할 수 있습니다. 어쩌구 저쩌구.</td>
-        <td id="Edit"><i><a href="#">등록</a></i></td>
-        <td id="Edit"><i><a href="#">편집</a></i></td>
+        <td>3</td>
+        <td><a href="#"><b>템푸스캔들 1차 완판 후 2차 판매 시작</b></a></td>
+        <td id="Edit"><i>2018-01-03</i></td>
+        <td id="Edit"><i>운영진</i></td>
         </tr>
+
+        <tr>
+        <td>4</td>
+        <td><a href="#"><b>▶템푸스캔들 카드뉴스◀</b></a></td>
+        <td id="Edit"><i>2018-01-04</i></td>
+        <td id="Edit"><i>운영진</i></td>
+        </tr>
+
+        <tr>
+        <td>5</td>
+        <td><a href="#"><b>(필독) 템푸스캔들만의 차별성</b></a></td>
+        <td id="Edit"><i>2018-01-05</i></td>
+        <td id="Edit"><i>운영진</i></td>
+        </tr>
+
+        <tr>
+        <td>6</td>
+        <td><a href="#"><b>템푸스캔들이 조향,조색 작업을 다 끝냈습니다!</b></a></td>
+        <td id="Edit"><i>2018-01-06</i></td>
+        <td id="Edit"><i>운영진</i></td>
+        </tr>
+
     </table>
-</div>
+
+    {# 동영상 #}
+        <video width="300" height="200" controls>
+            <source src="{% static 'videos/tempus candle.mp4' %}">
+        </video>
+    </div>
 {% endblock content %}
+</div>
 
 {% block footer %}                      <!--footer 블록 재정의-->
-<div id="footer">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/220px-Copyleft.svg.png"
-         height="12" width="12" /> acobyeal
-</div>
+    <div id="footer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/220px-Copyleft.svg.png"
+             height="12" width="12" /> acobyeal
+    </div>
 {% endblock footer %}

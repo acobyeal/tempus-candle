@@ -10,7 +10,11 @@
 <!--스타일시트 css/base.css 작성이 필요함-->
 <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
 <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />
+{# jquery 소스 링크 #}
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+{# 이미지 슬라이더 만들 때 추가 by 수연 #}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
 </head>
 
 <body>              <!--바디 영역은 4 영역(헤더/메뉴/콘텐츠/풋터)으로 구성-->
@@ -24,7 +28,7 @@
             <a href="#">로그아웃</a>
         </h4>
     </div>
-    <div id="menu">
+    <div id="menu" style="text-align:center;">
         <ul><!--메뉴 영역-->
             <li><a href="#">BRAND</a></li>
             <li><a href="#">NOTICE</a></li>
@@ -36,7 +40,6 @@
 </div>
 
 {% block content %}{% endblock %}   <!--블록 태그로 콘텐츠 영역 정의 -->
-
 {% block footer %}{% endblock %}    <!--블록 태그로 풋터 영역 정의-->
 
 </body>
