@@ -14,9 +14,8 @@
     <div class="cycle-slideshow" style="text-align:center;"
         cycle-slideshow data-cycle-loader="wait"
         data-cycle-timeout="2000"> <!--슬라이드 속도 조절-->
-        <!--중앙정렬 안됨, 추후 이미지 변경할 것-->
+        <!--사진 크기조정? 추후 사진 변경 need-->
         <div class="cycle-pager" style="align:center;"></div>
-        <img src="{% static 'img/tempus_home.jpg' %}" style="align:center"/>
         <img src="{% static 'img/candle_blue.png' %}" style="width: 400px; align:center"/>
         <img src="{% static 'img/candle_cherry.png' %}" style="width: 400px; align:center;"/>
         <img src="{% static 'img/candle_jasmin.png' %}" style="width: 400px; align:center;"/>
@@ -44,29 +43,36 @@
     <div id="products">
         <div class="product">
             <a href="#"><img src="{% static 'img/candle_cherry.png' %}" style="height:200px;"/></a>
-            <!--아래 텍스트에 링크걸 것-->
-            <h5>[템푸스] 하트병캔들 블랙체리</h5>
+            <!--일반 텍스트에서 a태그로 변경, 추후에 상세페이지 링크걸 것-->
+            <h5><a href="#">[템푸스] 하트병캔들 블랙체리</a></h5>
+            <h5>22,900원</h5>
         </div>
+
         <div class="product">
             <a href="#"><img src="{% static 'img/candle_blue.png' %}" style="height:200px;"/></a>
-            <h5>[템푸스] 하트병캔들 코튼블루</h5>
+            <h5><a href="#">[템푸스] 하트병캔들 코튼블루</a></h5>
+            <h5>22,900원</h5>
          </div>
+
         <div class="product">
             <a href="#"><img src="{% static 'img/candle_jasmin.png' %}" style="height:200px;"/></a>
-            <h5>[템푸스] 하트병캔들 쟈스민</h5>
+            <h5><a href="#">[템푸스] 하트병캔들 쟈스민</a></h5>
+            <h5>22,900원</h5>
          </div>
+
         <div class="product">
             <a href="#"><img src="{% static 'img/candle_summer.png' %}" style="height:200px;"/></a>
-            <h5>[템푸스] 하트병캔들 미드썸머나잇</h5>
+            <h5><a href="#">[템푸스] 하트병캔들 미드썸머나잇</a></h5>
+            <h5>22,900원</h5>
          </div>
+
         <div class="product">
             <a href="#"><img src="{% static 'img/candle_lavender.png' %}" style="height:200px;"/></a>
-            <h5>[템푸스] 하트병캔들 라벤더</h5>
+            <h5><a href="#">[템푸스] 하트병캔들 라벤더</a></h5>
+            <h5>22,900원</h5>
         </div>
 
-
-
-    <table id="applist">
+    <table id="applist" style="width:55%; height:150px; border:1px; float:left; margin-right:10px; padding:80px">
         <h4 style="text-align:left;">공지사항</h4>
         <tr>
         <td>1</td>
@@ -109,20 +115,34 @@
         <td id="Edit"><i>2018-01-06</i></td>
         <td id="Edit"><i>운영진</i></td>
         </tr>
-
     </table>
 
-    {# 동영상 #}
-        <video width="300" height="200" controls>
-            <source src="{% static 'videos/tempus candle.mp4' %}">
-        </video>
+    {# 동영상 - 위치를 공지사항이랑 같은 라인에 두고 싶은데 어떻게 해야할지 모르겠음..#}
+    <video  controls style="width:25%; height:150px; border:1px; float:left; padding: 10px"
+        poster='{% static 'img/candle_jasmin.png' %}'> {# 동영상 대표이미지(썸네일?)인데, 나중에 사진 변경할 것(그 여자 사진) #}
+        <source src="{% static 'videos/tempus candle.mp4' %}">
+    </video>
+
+    {# 리뷰 #}
+    <h4 style="text-align:left; float:left; width:60%; margin: 70px 5px 70px 5px">REVIEW</h4>
+    <div style="float:left; width:30%; margin: 57px 5px 50px 5px">
+        <input type="text" placeholder="Search">
+        <button>검색</button>
+
+
+    </div>
+
+
+
     </div>
 {% endblock content %}
-</div>
+
 
 {% block footer %}                      <!--footer 블록 재정의-->
     <div id="footer">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/220px-Copyleft.svg.png"
              height="12" width="12" /> acobyeal
+    {# 대표자명, 위치... #}
     </div>
 {% endblock footer %}
+</div>
