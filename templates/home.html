@@ -11,24 +11,25 @@
 
 <div id="content_home" style="text-align:center;">     <!--content_home 영역 정의-->
 
-    <div class="cycle-slideshow" style="text-align:center;"
+    <div class="cycle-slideshow"
         cycle-slideshow data-cycle-loader="wait"
-        data-cycle-timeout="2000"> <!--슬라이드 속도 조절-->
+        data-cycle-timeout="4000"> <!--슬라이드 속도 조절--><!--좀 빠른 것 같아서 느리게 조정함(은빈)-->
         <!--사진 크기조정? 추후 사진 변경 need-->
-        <div class="cycle-pager" style="align:center;"></div>
+        <div class="cycle-pager"></div>
         <img src="{% static 'img/candle_blue.png' %}" style="width: 400px; align:center"/>
         <img src="{% static 'img/candle_cherry.png' %}" style="width: 400px; align:center;"/>
         <img src="{% static 'img/candle_jasmin.png' %}" style="width: 400px; align:center;"/>
 
         <div id="imgtext">
-            <p style="text-align:center;">특별한 기념일, 소중한 추억 Tempus와 함께하세요</p>
+            <p>특별한 기념일, 소중한 추억 Tempus와 함께하세요</p>
+            <!--이거는 사진자체에 포토샵으로 글씨를 넣어서 첨부하는 방식으로 하자 모든 사진에 이 글 떠있는것도 아니고 하튼 이미지안에 글자넣는거 복잡쓰(은빈)-->
         </div>
 
     </div>
     <div id="homeimg"> <!--homeimg 영역 정의-->
 
     </div>
-    <div id="home_text"><!--p태그 글다 가운데정렬이 안돼ㅜㅜㅜ-->
+    <div id="home_text">
             <p>WHY? 많은 사람들이 TEMPUS CANDLE을 사랑하는가?<br/> <!--WHY부분 css처리!-->
                 캔들 자체를 세워서 향이 풍부한 필라캔들<br/>
                 용기에 담아 안정감이 충분한 컨테이너캔들<br/>
@@ -138,11 +139,18 @@
 {% endblock content %}
 
 
-{% block footer %}                      <!--footer 블록 재정의-->
+{% block footer %}<!--footer 블록 재정의-->
     <div id="footer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/220px-Copyleft.svg.png"
-             height="12" width="12" /> acobyeal
-    {# 대표자명, 위치... #}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/220px-Copyleft.svg.png" height="12" width="12" />acobyeal
+        <p style="text-align:center">상호명 : TEMPUS<br/>
+        대표 : 안수빈<br/>
+        주소 : 서울시 성동구 살곶이길 200<br/>
+        사업자등록번호 : 272-20-00689 <br/>
+        통신판매신고번호 : 제 2018-용인처인-0289-호<br/>
+        tel : 010-4764-3531<br/>
+        개인정보관리책임자 : 안동준 <br/>
+        e-mail : tempus_candle@naver.com<br/>
+        이용약관개인정보처리방침</p>
     </div>
 {% endblock footer %}
 </div>

@@ -1,27 +1,32 @@
 div#content_home {
-    position: absolute;
+    position: relative;
      width: 100%;
     text-align: center;
     top: 110px;
-    left: 110px;
-    right: 110px;
+    height:1550px; /*푸ㅜ터가 너무 안내려가서 이거저거해보다가 여기 height를 지정하면 내려가네..맞는방법은 아닌데 일단은 이렇게 해두겠음*/
+    /*left: 110px;*/
+    /*right: 110px;*/
 }
 
 .cycle-slideshow {
-    width: 200px;
+    text-align:center; /*cycle-pager를 가운데정렬하기 위함(은빈)*/
+    width: 100%;
     min-width: 100px;
-    max-width: 300px;
+    max-width: 400px;  /*이거 왜 설정해놓은거야? 이미지는 400인데 부모가 300이라서 가운데정렬이 제대로 안됨 이거 늘린다*/
     margin: 10px auto;
     padding: 0;
     position: relative;
 }
 .cycle-pager {
-    text-align: center;
-    width: 100px;
+    display:inline-block;
+    /*width: 100px;*/
     z-index: 500;
     position: absolute;
     top: 2px;
     overflow: hidden;
+}
+div#imgtext{
+     display:inline-block;
 }
 
 div#homeimg {
@@ -52,16 +57,17 @@ div#home_text > p{
      text-align: center;
 }
 div#products{
+    /*position:absolute;*/
     width: 100%;
-    height: 150px;
-    left: 300px;
+    height: 700px;
+    /*left: 300px;*/
 }
 /*푸터 하단고정 need*/
 div#footer{
-    position: absolute;
+    /*position: absolute;*/
 }
 
-div.product{
+.product{
     display:inline-block;
     height: 120px;
 }
