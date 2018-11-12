@@ -7,12 +7,7 @@ div#content_home {
     /*left: 110px;*/
     /*right: 110px;*/
 }
-div#sibal{
-    text-align:center;
-    width:1000px;
-
-}
-.cycle-slideshow {
+div#cycle-slideshow {
     text-align:center; /*cycle-pager를 가운데정렬하기 위함(은빈)*/
     width: 1000px;
     /*min-width: 100px;*/
