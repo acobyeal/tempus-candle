@@ -10,19 +10,22 @@
 {% block content %}                         <!--content 블록 재정의-->
 
 <div id="content_home" style="text-align:center;">     <!--content_home 영역 정의-->
-    <!--슬라이드 속도 조절--><!--좀 빠른 것 같아서 느리게 조정함(은빈)-->
+
+    <div class="cycle-slideshow" style="width:1000px;"
+        data-cycle-loader="wait"
+        data-cycle-timeout="4000"> <!--슬라이드 속도 조절--><!--좀 빠른 것 같아서 느리게 조정함(은빈)-->
         <!--사진 크기조정? 추후 사진 변경 need-->
-        <div id="sibal" data-cycle-loader="wait"
-        data-cycle-timeout="4000">
         <div class="cycle-pager"></div>
         <img src="{% static 'img/slide1.PNG' %}" style="width: 980px; margin: auto; text-align:center;"/>
         <img src="{% static 'img/slide2.PNG' %}" style="width: 980px; margin: auto; text-align:center;"/>
         <img src="{% static 'img/slide3.PNG' %}" style="width: 980px; margin: auto; text-align:center;"/>
-</div>
+
 {#        <div id="imgtext">#}
 {#            <p>특별한 기념일, 소중한 추억 Tempus와 함께하세요</p>#}
 {#            <!--이거는 사진자체에 포토샵으로 글씨를 넣어서 첨부하는 방식으로 하자 모든 사진에 이 글 떠있는것도 아니고 하튼 이미지안에 글자넣는거 복잡쓰(은빈)-->#}
 {#        </div> -> 이 부분 사진에 가려서 안보이거든? 그래서 일단 주석처리함!! 사진 이미지 가로로 꽉채우는거 더 찾아봐야겠다..#}
+
+    </div>
     <div id="home_text">
                 <p style="text:red">WHY?</p>
                 <p> 많은 사람들이 TEMPUS CANDLE을 사랑하는가?</p>
