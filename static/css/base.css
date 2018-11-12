@@ -35,7 +35,6 @@ div#menu {
 div#content {
     position: absolute;
     top: 90px;
-    height: auto;
 
     /*left: 50px;*/
     /*right: 50px;*/
@@ -64,10 +63,8 @@ div#footer {
 .maintitle {
     display: table-cell;
     vertical-align: middle;
-
 }
 .maintitle > a {
-    display: table-cell;
     color: saddlebrown;
     font-size: 16px;
     font-family: 'Roboto Slab', serif;

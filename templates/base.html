@@ -20,8 +20,12 @@
 <body>              <!--바디 영역은 4 영역(헤더/메뉴/콘텐츠/풋터)으로 구성-->
     <div id="header">
                 <!--헤더 영역-->
-        <img class="logo_img" src="{% static 'img/tempus_logo.jpg' %}"/>
-        <h1 class="maintitle"><a href="{% url 'home' %}" style="text-decoration: none">Tempus Candle</a></h1>
+        <!--로고 이미지랑 텍스트 간격 좁혀야 함-->
+{#        <img class="logo_img" src="{% static 'img/logo.PNG' %}/>#}
+{#       <h1 class="maintitle"><a href="{% url 'home' %}" style="text-decoration: none">Tempus Candle</a></h1>#}
+        <a href="home.html"><img src="{% static 'img/logo.PNG' %}" style="width:35%;"/></a> <!--로고+텍스트 캡처떠서 넣음-->
+        {# 위에 home.html 링크 작동X #}
+
         <h4 class="welcome">반갑습니다.
             <a href="#">acobyeal</a>님.  /
             <a href="#">비밀번호 변경</a> /
@@ -34,7 +38,7 @@
             <li style="width:10%;"><a href="#">NOTICE</a></li>
             <li style="width:10%;"><a href="#">Q&A</a></li>
             <li style="width:10%;"><a href="#">REVIEW</a></li>
-            <li style="width:10%;"><a href="#">SEARCH</a></li>
+            <li style="width:10%;"><a href="#">SHOP</a></li>
             <li style="width:10%;"><a href="{% url 'admin:index' %}">ADMIN</a></li>
         </ul>
 </div>
