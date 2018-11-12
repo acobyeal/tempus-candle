@@ -8,10 +8,10 @@ div#content_home {
     /*right: 110px;*/
 }
 
-.cycle-slideshow {
+div.cycle-slideshow {
     text-align:center; /*cycle-pager를 가운데정렬하기 위함(은빈)*/
-    width: 1000px;
-    min-width: 100px;
+    width: 100%;
+    /*min-width: 100px;*/
     /*max-width: px;  !*이거 왜 설정해놓은거야? 이미지는 400인데 부모가 300이라서 가운데정렬이 제대로 안됨 이거 늘린다*!*/
     margin: 10px auto;
     padding: 0;
