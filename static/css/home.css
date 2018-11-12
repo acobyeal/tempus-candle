@@ -1,6 +1,6 @@
 div#content_home {
     position: relative;
-     width: 100%;
+     width: 1000px;
     text-align: center;
     top: 110px;
     height:1550px; /*푸터가 너무 안내려가서 이거저거해보다가 여기 height를 지정하면 내려가네..맞는방법은 아닌데 일단은 이렇게 해두겠음*/
@@ -27,20 +27,6 @@ div#content_home {
 }
 div#imgtext{
      display:inline-block;
-}
-
-div#homeimg {
-    position:relative;
-    width: 100%;
-    text-align: center;
-    background: white;
-    padding: 10px 0 1px 0;
-}
-div#homeimg img{
-    display: block;
-    height:400px;
-    width: 500px;
-    margin: auto;
 }
 div#imgtext {
     display: inline-block;
