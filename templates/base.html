@@ -1,3 +1,71 @@
+{#<!DOCTYPE html>     <!--HTML5 규약을 준수하는 파일-->#}
+{#<html lang="ko">    <!--언어는 한국어로 지정--><!---->#}
+{##}
+{#<head>              <!--페이지 타이틀과 css 파일 2개를 연결-->#}
+{#<title>{% block title %}Django Web Programming{% endblock %}</title>#}
+{##}
+{#{% load staticfiles %}  <!--정적 파일인 css 연결하기 위하여, staticfiles를 로드-->#}
+{#<!--스타일시트 css/base.css 작성이 필요함-->#}
+{#<link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">#}
+{#<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />#}
+{#<link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />#}
+{##}
+{#</head>#}
+{##}
+{#<body>              <!--바디 영역은 4 영역(헤더/메뉴/콘텐츠/풋터)으로 구성-->#}
+{##}
+{#<div id="header">                   <!--헤더 영역-->#}
+{#    <h2 class="maintitle">쉽고 빠른 장고 웹 프로그래밍</h2>#}
+{#    <!--ch11 추가-->#}
+{#    {% if user.is_active %}#}
+{#    <h4 class="welcome">반갑습니다.#}
+{#                <strong>{% firstof user.get_short_name user.get_username %}</strong> /#}
+{#                <a href="#">sooyeon6063</a>님.  /#}
+{#                <a href="{% url 'password_change' %}">비밀번호 변경</a> /#}
+{#                <a href="{% url 'logout' %}">로그아웃</a>#}
+{#    </h4>#}
+{#    {% else %}#}
+{#    <h4 class="welcome">반갑습니다, 익명 /#}
+{#                <a href="{% url 'login' %}">로그인</a>#}
+{#                <a href="{% url 'register' %}">등록</a>#}
+{#    </h4>#}
+{#    {% endif %}#}
+{#</div>#}
+{##}
+{#<div id="menu">                     <!--메뉴 영역-->#}
+{#    <li><a href="{% url 'home' %}">홈</a></li>#}
+{#    <li><a href="{% url 'bookmark:index' %}">책갈피</a></li>#}
+{#    <li><a href="{% url 'blog:index' %}">게시판</a></li>#}
+{#    <li><a href="{% url 'photo:index' %}">사진첩</a></li>#}
+{##}
+{#    <li><a href="#">추가&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->#}
+{#        <ul>#}
+{#            <li><a href="#">책갈피</a></li>#}
+{#            <li><a href="#">게시판</a></li>#}
+{#	        <li><a href="#">사진첩</a></li>#}
+{#        </ul>#}
+{#    </li>#}
+{#    <li><a href="#">편집&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->#}
+{#        <ul>#}
+{#            <li><a href="#">책갈피</a></li>#}
+{#            <li><a href="#">게시판</a></li>#}
+{#	        <li><a href="#">사진첩</a></li>#}
+{#        </ul>#}
+{#    </li>#}
+{##}
+{#    <li><a href="{% url 'blog:post_archive' %}">저장소</a></li>#}
+{#    <li><a href="{% url 'blog:search' %}">검색</a></li>               <!--ch09 수정 1/1-->#}
+{#    <li><a href="{% url 'admin:index' %}">관리자</a></li>#}
+{#</div>#}
+{##}
+{#{% block content %}{% endblock %}   <!--블록 태그로 콘텐츠 영역 정의 -->#}
+{##}
+{#{% block footer %}{% endblock %}    <!--블록 태그로 풋터 영역 정의-->#}
+{##}
+{#<!--{% block js %}{% endblock js%}-->#}
+{#</body>#}
+{#</html>#}
+
 <!DOCTYPE html>     <!--HTML5 규약을 준수하는 파일-->
 <html lang="ko">    <!--언어는 한국어로 지정--><!---->
 
@@ -26,19 +94,33 @@
         <a href="home.html"><img src="{% static 'img/logo.PNG' %}" style="width:35%;"/></a> <!--로고+텍스트 캡처떠서 넣음-->
         {# 위에 home.html 링크 작동X #}
 
+        {% if user.is_active %}
         <h4 class="welcome">반갑습니다.
+            <strong>{% firstof user.get_short_name user.get_username %}</strong>
             <a href="#">acobyeal</a>님.  /
-            <a href="#">비밀번호 변경</a> /
-            <a href="#">로그아웃</a>
+            <a href="{% url 'password_change' %}">비밀번호 변경</a> /
+            <a href="{% url 'logout' %}">로그아웃</a>
         </h4>
+        {% else %}
+         <h4 class="welcome">반갑습니다, 손님
+                <a href="{% url 'login' %}">로그인</a>
+                <a href="{% url 'register' %}">회원가입</a>
+    </h4>
+        {% endif %}
     </div>
+
     <div id="menu" style="text-align:center;">
         <ul ><!--메뉴 영역-->
             <li style="width:10%;"><a href="#">BRAND</a></li>
-            <li style="width:10%;"><a href="#">NOTICE</a></li>
-            <li style="width:10%;"><a href="#">Q&A</a></li>
-            <li style="width:10%;"><a href="#">REVIEW</a></li>
-            <li style="width:10%;"><a href="#">SHOP</a></li>
+            <li style="width:10%;"><a href="{% url 'blog:index' %}">NOTICE</a></li>
+            <li style="width:10%;"><a href="{% url 'blog:post_archive' %}">Q&A</a></li>
+            <li style="width:10%;"><a href="{% url 'photo:index' %}">REVIEW</a></li>
+            <li style="width:10%;"><a href="#">SHOP</a> <!--드롭다운 메뉴 구성-->
+                <ul>
+                    <li><a href="#">캔들</a></li>
+                    <li><a href="#">소모품</a></li>
+                </ul>
+            </li>
             <li style="width:10%;"><a href="{% url 'admin:index' %}">ADMIN</a></li>
         </ul>
 </div>

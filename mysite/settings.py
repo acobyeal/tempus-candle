@@ -43,7 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bookmark.apps.BookmarkConfig',     # (ch02) bookmark 앱을 추가 등록
     'blog.apps.BlogConfig',             # (ch03) blog 앱을 추가 등록
+    'tagging.apps.TaggingConfig',       # (ch07) tagging 앱을 추가 등록
+    'disqus',                           # (ch08) 1/4
+    'django.contrib.sites',             # (ch08) 2/4
+    'photo.apps.PhotoConfig',       # (ch10) 1/1
 ]
+DISQUS_WEBSITE_SHORTNAME = 'sooyeon6063'   # (ch08) 3/4
+SITE_ID = 1                             # (ch08) 4/4
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -128,5 +134,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]   # 추가 (교과서 40 쪽)
 
-MEDIA_URL = '/media/'                             # 추가 (교과서 40 쪽)
-MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]    # 추가 (교과서 40 쪽)
+MEDIA_URL = '/media/'                             # 업로드된 사진을 저장할 폴더
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   # 업로드된 사진을 저장할 폴더
+
+# ch11 추가
+#LOGIN_URL = '/accounts/login/'
+#LOGOUT_URL = '/accounts/logout/'
+LOGIN_REDIRECT_URL = '/'
+
