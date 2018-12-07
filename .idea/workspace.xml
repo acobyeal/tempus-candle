@@ -1,71 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="595464c4-00e5-432c-a59b-4eb41c6cb5b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/blog/forms.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0002_post_tag.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change beforePath="$PROJECT_DIR$/blog/static/tagging/tag.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_all.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_all.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_archive.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_archive.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_archive_day.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_archive_day.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_archive_month.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_archive_month.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_archive_year.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_archive_year.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_search.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/tagging/tagging_cloud.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/tagging/tagging_post_list.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" afterPath="$PROJECT_DIR$/blog/urls.py" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
-      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_detail.html" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_detail.html" />
-      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_list.html" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_list.html" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/20170302_002121.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/20170302_002121.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Desert.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Desert.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Lighthouse.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Lighthouse.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Tulips.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Tulips.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/slide1.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/slide1.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/slide2.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/slide2.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/장고.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/장고.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings.py" afterPath="$PROJECT_DIR$/mysite/settings.py" />
-      <change beforePath="$PROJECT_DIR$/mysite/urls.py" afterPath="$PROJECT_DIR$/mysite/urls.py" />
-      <change beforePath="$PROJECT_DIR$/mysite/views.py" afterPath="$PROJECT_DIR$/mysite/views.py" />
-      <change beforePath="$PROJECT_DIR$/photo/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/admin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/apps.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/fields.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/migrations/0001_initial.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/migrations/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/models.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/static/photo/photo.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/templates/photo/album_detail.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/templates/photo/album_list.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/templates/photo/photo_detail.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/tests.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/urls.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/photo/views.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/css/base.css" afterPath="$PROJECT_DIR$/static/css/base.css" />
-      <change beforePath="$PROJECT_DIR$/static/css/forms.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/css/home.css" afterPath="$PROJECT_DIR$/static/css/home.css" />
-      <change beforePath="$PROJECT_DIR$/static/css/tabular.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tc_work_1112.zip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/logged_out.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/password_change_done.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/password_change_form.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register_done.html" afterPath="" />
-    </list>
+    <list default="true" id="595464c4-00e5-432c-a59b-4eb41c6cb5b5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
