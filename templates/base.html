@@ -16,31 +16,31 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 </head>
-
-<body>              <!--바디 영역은 4 영역(헤더/메뉴/콘텐츠/풋터)으로 구성-->
+ <!--바디 영역은 4 영역(헤더/메뉴/콘텐츠/풋터)으로 구성-->
+<body>
+    <!--헤더 영역-->
     <div id="header">
-                <!--헤더 영역-->
-        <!--로고 이미지랑 텍스트 간격 좁혀야 함-->
-{#        <img class="logo_img" src="{% static 'img/logo.PNG' %}/>#}
-{#       <h1 class="maintitle"><a href="{% url 'home' %}" style="text-decoration: none">Tempus Candle</a></h1>#}
-        <a href="home.html"><img src="{% static 'img/logo.PNG' %}" style="width:35%;"/></a> <!--로고+텍스트 캡처떠서 넣음-->
-        {# 위에 home.html 링크 작동X #}
-
-        <h4 class="welcome">반갑습니다.
+        <h4 id="welcome">반갑습니다.
             <a href="#">acobyeal</a>님.  /
             <a href="#">비밀번호 변경</a> /
             <a href="#">로그아웃</a>
         </h4>
-    </div>
-    <div id="menu" style="text-align:center;">
+        <!--로고 이미지랑 텍스트 간격 좁혀야 함-->
+       <div id="img_container">
+           <a href="{% url 'home' %}"><img src="{% static 'img/logo.PNG' %}"/></a> <!--로고+텍스트 캡처떠서 넣음-->
+       </div>
+        {# 위에 home.html 링크 작동X -->(수정) 템플릿태그로 작성해야함#}
+
+    <div id="menu">
         <ul ><!--메뉴 영역-->
-            <li style="width:10%;"><a href="#">BRAND</a></li>
-            <li style="width:10%;"><a href="#">NOTICE</a></li>
-            <li style="width:10%;"><a href="#">Q&A</a></li>
-            <li style="width:10%;"><a href="#">REVIEW</a></li>
-            <li style="width:10%;"><a href="#">SHOP</a></li>
-            <li style="width:10%;"><a href="{% url 'admin:index' %}">ADMIN</a></li>
+            <li ><a href="#">BRAND</a></li>
+            <li><a href="{% url 'notice:index' %}">NOTICE</a></li>
+            <li><a href="#">Q&A</a></li>
+            <li><a href="#">REVIEW</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
         </ul>
+    </div>
 </div>
 
 {% block content %}{% endblock %}   <!--블록 태그로 콘텐츠 영역 정의 -->

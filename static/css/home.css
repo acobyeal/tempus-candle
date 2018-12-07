@@ -10,12 +10,16 @@ div#content_home {
 
 .cycle-slideshow {
     text-align:center; /*cycle-pager를 가운데정렬하기 위함(은빈)*/
-    width: 100%;
+    width: 1000px;
     min-width: 100px;
-    max-width: 400px;  /*이거 왜 설정해놓은거야? 이미지는 400인데 부모가 300이라서 가운데정렬이 제대로 안됨 이거 늘린다*/
+    max-width: 1000px;  /*이거 왜 설정해놓은거야? 이미지는 400인데 부모가 300이라서 가운데정렬이 제대로 안됨 이거 늘린다*/
     margin: 10px auto;
     padding: 0;
     position: relative;
+}
+.cycle-slideshow img{
+    width: 1000px;
+    margin: 0 auto;  /*이미지 가운데 정렬*/
 }
 .cycle-pager {
     display:inline-block;
@@ -25,36 +29,9 @@ div#content_home {
     top: 2px;
     overflow: hidden;
 }
-div#imgtext{
-     display:inline-block;
-}
-
-div#homeimg {
-    position:relative;
-    width: 100%;
-    text-align: center;
-    background: white;
-    padding: 10px 0 1px 0;
-}
-div#homeimg img{
-    display: block;
-    height:400px;
-    width: 500px;
-    margin: auto;
-}
-div#imgtext {
-    display: inline-block;
-    position:absolute;
-    bottom:10px;
-}
-div#imgtext p{
-    text-align: center;
-}
 div#home_text{
-    display: inline-block;
-}
-div#home_text > p{
-     text-align: center;
+    text-align: center;
+
 }
 div#products{
     /*position:absolute;*/

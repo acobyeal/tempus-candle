@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bookmark.apps.BookmarkConfig',     # (ch02) bookmark 앱을 추가 등록
     'blog.apps.BlogConfig',             # (ch03) blog 앱을 추가 등록
+    'notice.apps.NoticeConfig'          # notice(공지사항)앱 추가 등록
 ]
 
 MIDDLEWARE = [
