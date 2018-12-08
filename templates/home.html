@@ -34,80 +34,99 @@
 
     <div id="products">
         <div class="product">
-            <a href="#"><img src="{% static 'img/candle_cherry.png' %}" style="height:200px;"/></a>
+            <a href="#"><img src="{% static 'img/candle_cherry.png' %}" /></a>
             <!--일반 텍스트에서 a태그로 변경, 추후에 상세페이지 링크걸 것-->
             <h5><a href="#">[템푸스] 하트병캔들 블랙체리</a></h5>
             <h5>22,900원</h5>
         </div>
 
         <div class="product">
-            <a href="#"><img src="{% static 'img/candle_blue.png' %}" style="height:200px;"/></a>
+            <a href="#"><img src="{% static 'img/candle_blue.png' %}"/></a>
             <h5><a href="#">[템푸스] 하트병캔들 코튼블루</a></h5>
             <h5>22,900원</h5>
          </div>
 
         <div class="product">
-            <a href="#"><img src="{% static 'img/candle_jasmin.png' %}" style="height:200px;"/></a>
+            <a href="#"><img src="{% static 'img/candle_jasmin.png' %}" /></a>
             <h5><a href="#">[템푸스] 하트병캔들 쟈스민</a></h5>
             <h5>22,900원</h5>
          </div>
 
         <div class="product">
-            <a href="#"><img src="{% static 'img/candle_summer.png' %}" style="height:200px;"/></a>
+            <a href="#"><img src="{% static 'img/candle_summer.png' %}"/></a>
             <h5><a href="#">[템푸스] 하트병캔들 미드썸머나잇</a></h5>
             <h5>22,900원</h5>
          </div>
 
         <div class="product">
-            <a href="#"><img src="{% static 'img/candle_lavender.png' %}" style="height:200px;"/></a>
+            <a href="#"><img src="{% static 'img/candle_lavender.png' %}"/></a>
             <h5><a href="#">[템푸스] 하트병캔들 라벤더</a></h5>
             <h5>22,900원</h5>
         </div>
-
-    <table id="applist" style="width:55%; height:150px; border:1px; float:left; margin-right:10px; padding:80px">
-        <h4 style="text-align:left;">공지사항</h4>
-        <tr>
-        <td>1</td>
-        <td><a href="#"><b>신상품 출시 예정</b></a></td>
-        <td id="Edit"><i>2018-01-01</i></td>
-        <td id="Edit"><i>운영진</i></td>
-        </tr>
-
-        <tr>
-        <td>2</td>
-        <td><a href="#"><b>리뷰 적립금 지급</b></a></td>
-        <td id="Edit"><i>2018-01-02</i></td>
-        <td id="Edit"><i>운영진</i></td>
-        </tr>
-
-        <tr>
-        <td>3</td>
-        <td><a href="#"><b>템푸스캔들 1차 완판 후 2차 판매 시작</b></a></td>
-        <td id="Edit"><i>2018-01-03</i></td>
-        <td id="Edit"><i>운영진</i></td>
-        </tr>
-
-        <tr>
-        <td>4</td>
-        <td><a href="#"><b>▶템푸스캔들 카드뉴스◀</b></a></td>
-        <td id="Edit"><i>2018-01-04</i></td>
-        <td id="Edit"><i>운영진</i></td>
-        </tr>
-
-        <tr>
-        <td>5</td>
-        <td><a href="#"><b>(필독) 템푸스캔들만의 차별성</b></a></td>
-        <td id="Edit"><i>2018-01-05</i></td>
-        <td id="Edit"><i>운영진</i></td>
-        </tr>
-
-        <tr>
-        <td>6</td>
-        <td><a href="#"><b>템푸스캔들이 조향,조색 작업을 다 끝냈습니다!</b></a></td>
-        <td id="Edit"><i>2018-01-06</i></td>
-        <td id="Edit"><i>운영진</i></td>
-        </tr>
-    </table>
+        <table id="applist" style="width:55%; height:150px; border:1px; float:left; margin-right:10px; padding:80px" >
+            <h4>공지사항</h4>
+            <tr>
+                <th>번호</th>
+                <th>최종 수정일</th>
+                <th>제목</th>
+                <th>슬러그</th>
+                <th>요약</th>
+            </tr>
+            {% for notice in notice_posts %}
+            <tr>
+                <td>{{ notice.id }}</td>
+                <td>{{ notice.modify_date }}</td>
+                <td><a href='{{ notice.get_absolute_url }}'>{{ notice.title }}</a></td>
+                <td>{{ notice.slug }}</td>
+                <td><p>{{ notice.description }}</p></td>
+            </tr>
+            {% endfor %}
+        </table>
+{#        이 부분은 직접 쓰는게 아니라 함수로 notice관련 정보를 불러오는게 맞는듯!#}
+{#        <table >#}
+{#            <h4 style="text-align:left;">공지사항</h4>#}
+{#            <tr>#}
+{#            <td>1</td>#}
+{#            <td><a href="#"><b>신상품 출시 예정</b></a></td>#}
+{#            <td id="Edit"><i>2018-01-01</i></td>#}
+{#            <td id="Edit"><i>운영진</i></td>#}
+{#            </tr>#}
+{#    #}
+{#            <tr>#}
+{#            <td>2</td>#}
+{#            <td><a href="#"><b>리뷰 적립금 지급</b></a></td>#}
+{#            <td id="Edit"><i>2018-01-02</i></td>#}
+{#            <td id="Edit"><i>운영진</i></td>#}
+{#            </tr>#}
+{#    #}
+{#            <tr>#}
+{#            <td>3</td>#}
+{#            <td><a href="#"><b>템푸스캔들 1차 완판 후 2차 판매 시작</b></a></td>#}
+{#            <td id="Edit"><i>2018-01-03</i></td>#}
+{#            <td id="Edit"><i>운영진</i></td>#}
+{#            </tr>#}
+{#    #}
+{#            <tr>#}
+{#            <td>4</td>#}
+{#            <td><a href="#"><b>▶템푸스캔들 카드뉴스◀</b></a></td>#}
+{#            <td id="Edit"><i>2018-01-04</i></td>#}
+{#            <td id="Edit"><i>운영진</i></td>#}
+{#            </tr>#}
+{#    #}
+{#            <tr>#}
+{#            <td>5</td>#}
+{#            <td><a href="#"><b>(필독) 템푸스캔들만의 차별성</b></a></td>#}
+{#            <td id="Edit"><i>2018-01-05</i></td>#}
+{#            <td id="Edit"><i>운영진</i></td>#}
+{#            </tr>#}
+{#    #}
+{#            <tr>#}
+{#            <td>6</td>#}
+{#            <td><a href="#"><b>템푸스캔들이 조향,조색 작업을 다 끝냈습니다!</b></a></td>#}
+{#            <td id="Edit"><i>2018-01-06</i></td>#}
+{#            <td id="Edit"><i>운영진</i></td>#}
+{#            </tr>#}
+{#        </table>#}
 
     {# 동영상 - 위치를 공지사항이랑 같은 라인에 두고 싶은데 어떻게 해야할지 모르겠음..#}
     <video  controls style="width:25%; height:150px; border:1px; float:left; padding: 10px"

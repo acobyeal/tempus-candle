@@ -20,11 +20,19 @@
 <body>
     <!--헤더 영역-->
     <div id="header">
+        <!--ch11 추가-->
+        {% if user.is_active %}
         <h4 id="welcome">반갑습니다.
-            <a href="#">acobyeal</a>님.  /
-            <a href="#">비밀번호 변경</a> /
-            <a href="#">로그아웃</a>
+                    <strong>{% firstof user.get_short_name user.get_username %}</strong> /
+                    <a href="{% url 'password_change' %}">비밀번호 변경</a> /
+                    <a href="{% url 'logout' %}">로그아웃</a>
         </h4>
+        {% else %}
+        <h4 id="welcome">반갑습니다, 익명 /
+                    <a href="{% url 'login' %}">로그인</a>
+                    <a href="{% url 'register' %}">등록</a>
+        </h4>
+        {% endif %}
         <!--로고 이미지랑 텍스트 간격 좁혀야 함-->
        <div id="img_container">
            <a href="{% url 'home' %}"><img src="{% static 'img/logo.PNG' %}"/></a> <!--로고+텍스트 캡처떠서 넣음-->
@@ -35,7 +43,7 @@
         <ul ><!--메뉴 영역-->
             <li ><a href="#">BRAND</a></li>
             <li><a href="{% url 'notice:index' %}">NOTICE</a></li>
-            <li><a href="#">Q&A</a></li>
+            <li><a href="{% url 'qna:index' %}">Q&A</a></li>
             <li><a href="#">REVIEW</a></li>
             <li><a href="#">SHOP</a></li>
             <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
