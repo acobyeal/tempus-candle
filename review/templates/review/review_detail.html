@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}review_detail.html{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "review/review.css" %}{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h2>{{ object.title }}</h2>
+    <table class="review-detail">
+        <tr>
+            <td>
+                <a href="{{ object.image.url }}">
+                    <img style="max-width:100%" src="{{ object.image.url }}" />
+                </a>
+            </td>
+            <td>
+                <ul>
+                    <li>설명</li>
+                    {% if object.description %}
+                        <p>{{ object.description|linebreaks }}</p>
+                    {% else %}
+                        <p>(blank)</p>
+                    {% endif %}
+                    <li>등록 일시</li>
+                    <p>{{ object.upload_date }}</p>
+                    <!--https://docs.djangoproject.com/en/dev/ref/templates/builtins/?from=olddocs-->
+                    <li>제품</li>
+                    <p><a href="{% url 'review:product_detail' object.product.id %}">{{ object.product.name }}</a></p>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

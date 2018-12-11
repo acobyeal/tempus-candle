@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',             # (ch03) blog 앱을 추가 등록
     'notice.apps.NoticeConfig',          # notice(공지사항)앱 추가 등록
     'qna.apps.QnaConfig',                # qna(Q&A)앱 추가 등록
+    'review.apps.ReviewConfig',                # Review(리뷰)앱 추가 등록
 ]
 
 MIDDLEWARE = [
@@ -130,4 +131,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]   # 추가 (교과서 40 쪽)
 
 MEDIA_URL = '/media/'                             # 추가 (교과서 40 쪽)
-MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]    # 추가 (교과서 40 쪽)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    # 추가 (교과서 40 쪽)
+
+LOGIN_REDIRECT_URL = '/'
