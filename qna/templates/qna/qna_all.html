@@ -10,201 +10,6 @@
     <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/qna.css" %}{% endblock %}" />
     <meta charset="UTF-8">
     <title>템푸스캔들 Q&A</title>
-    <style>
-
-/* HEADER */
-div#header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 250px;
-    width: 100%;
-    background: white;
-}
-h4#welcome {
-    display: block;
-    vertical-align: top;
-    text-align:right;
-    padding-top: 10px;
-    color: #000000;
-    font-weight: normal;
-    font-size: 12px;
-}
-div#welcome a:hover{
-    color: gray;
-}
-div#img_container{
-    width:100%;
-}
-div#img_container a{
-    text-align:center;
-    margin:  auto;
-    height: 90px;
-    width: 100%;
-}
-div#img_container img{
-    text-align:center;
-    margin:  auto;
-    height: 90px;
-    width: 350px;
-}
-div#header a{
-    display: inline-block;
-}
-div#header img{
-
-}
-div#menu {
-    position: absolute;
-    top: 200px;
-    left: 0px;
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-    border-spacing: 40px 0px;
-    background: white;
-    font-size: 8px;
-    text-align: center;
-
-}
-/* MENU */
-#menu,#menu ul,#menu ul li,#menu ul li a {
-margin: 0;
-padding: 0;
-border: 0;
-list-style: none;
-line-height: 1;
-display: block;
-position: relative;
-/*position: absolute;*/
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-}
-#menu {
-border-bottom: 1px solid #333333;
-padding: 0 5px;
-width: auto;
-font-family: 'Roboto Slab', serif;
-background: white;
-border-top-left-radius: 3px;
-border-top-right-radius: 3px;
-}
-#menu:after,#menu ul:after {
-content: ".";
-display: block;
-clear: both;
-visibility: hidden;
-line-height: 0;
-height: 0;
-}
-#menu ul li {
-display: inline-block;
-width:10%;
-}
-#menu.align-right ul li {
-float: right;
-}
-#menu.align-center ul {
-text-align: center;
-}
-#menu ul li a {
-font-size: 14px;
-padding: 15px;
-text-decoration: none;
-color: #333333;
-}
-#menu ul li:hover ,
-/*#menu ul li a:hover,*/
-#menu ul li.active {
-background: burlywood;
-}
-@media all and (max-width: 640px) {
-#menu {
-padding: 0;
-border-radius: 0;
-border: 0;
-}
-#menu ul li,
-#menu.align-center,
-#menu.align-right {
-display: block;
-}
-}
-/* pulldown menu */
-div#menu li  ul {
-display:none;
-position:absolute;
-margin: 0;
-padding:10px 10px 5px 10px;
-list-style:none;
-border-right: 1px solid #ccc;
-border-left: 1px solid #ccc;
-border-bottom: 1px solid #ccc;
-background: white;
-z-index: 1;
-}
-
-div#menu li:hover ul {
-display:block;
-}
-
-div#footer {
-position: absolute;
-bottom: 0;
-/*left: 50px;*/
-/*right: 50px;*/
-height: 100px;
-width: 100%;
-border-top:1px solid #ccc;
-}
-
-/* LINK */
-a:link, a:visited {
-color: #000000;
-text-decoration: none;
-}
-
-a:hover {
-text-decoration: underline;
-}
-
-#tbl {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 70%;
-    margin: auto;
-}
-
-#tbl td, #tbl th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#tbl tr:nth-child(even){background-color:  white;}
-
-#tbl tr:hover {background-color: white;}
-
-#tbl th {
-    padding-top: 15px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: white;
-    color: black;
-}
-
-.centered {
-    text-align: center;
-}
-
-#footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    background:#cccc;
-}
-
-    </style>
 </head>
 <body>
     <!--로고를 메뉴랑 같은 라인에 넣고 싶은데 .. 자꾸 오류-->
@@ -223,97 +28,61 @@ text-decoration: underline;
         {% endif %}
         <!--로고 이미지랑 텍스트 간격 좁혀야 함-->
        <div id="img_container">
-           <a href="{% url 'home' %}"><img src="{% static 'img/logo.PNG' %}"/></a> <!--로고+텍스트 캡처떠서 넣음-->
+           <a href="{% url 'home' %}"><img src="{% static 'img/logo.PNG' %}"/></a>
        </div>
-        {# 위에 home.html 링크 작동X -->(수정) 템플릿태그로 작성해야함#}
-
-        <div id="menu">
+    <div id="menu">
             <ul ><!--메뉴 영역-->
-                <li ><a href="#">BRAND</a></li>
+                <li ><a href="{% url 'blog:index' %}">BRAND</a></li>
                 <li><a href="{% url 'notice:index' %}">NOTICE</a></li>
                 <li><a href="{% url 'qna:index' %}">Q&A</a></li>
                 <li><a href="{% url 'review:index' %}">REVIEW</a></li>
-                <li><a href="#">SHOP&bigtriangledown;</a>
-                    <ul>
-                        <li><a href="#">캔들</a></li>
-                        <li><a href="#">소모품</a></li>
-                    </ul>
-                </li>
+                <li><a href="{% url 'photo:index' %}">SHOP</a></li>
                 <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
             </ul>
         </div>
     </div>
-    <h1>QnA List</h1>
 
-    <!--blog.views.PostLV.context_object_name='posts'라고
-    기본값 object_list 대신 정의했지만, object_list 역시 사용 가능함-->
-    {% for qna in qnas %}
-        <h2>
-    {#        <!--href='blog/post/django-example/'과 같은 슬러그 형태로 링크 처리하되,#}
-    {#        {{ qna.models.QnA.get_absolute_url }} 또는#}
-    {#        {% url url_name pk %}}로 링크 처리-->#}
-            <a href='{{ qna.get_absolute_url }}'>
-            <!--위 a 요소와 아래 a 요소는 동일한 코드이지만,
-            위는 url 패턴을 간접 태그 인자로 사용하지만,
-            아래는 url 패턴을 직접 태그 인자로 사용함 -->
-    {#        <!--<a href="{% url 'qna:qna_detail' qna.slug %}}">-->#}
-                {{ qna.title }}
-            </a>
-        </h2>
-        <!--post.modify_date를 date:"N d, Y" 형식으로 출력 (예: July 05, 2015) cf. http://oddly.tistory.com/64-->
-        {{ qna.modify_date|date:"N d, Y" }}
-        <p>{{ qna.description }}</p>
-    {% endfor %}
+    <table id="tbl" >
+            <tr>
+{#                <th>번호</th>#}
+                <!--항목 이름 쓰지말고.. 이렇게 해봤어-->
+                <th>Q & A</th>
+                <th></th> <!--최종 수정일-->
+                <th></th> <!--슬러그(작성자)-->
+{#                <th>작성자</th> <!--요약 -> 작성자-->#}
+            </tr>
+            {% for qna in qnas %}
+            <tr>
+                <td>{{ qna.id }}</td> <!--번호-->
+                <td><a href='{{ qna.get_absolute_url }}'>{{ qna.title }}</a></td> <!--제목-->
+                <td>{{ qna.modify_date }}</td> <!--최종 수정일-->
+
+            </tr>
+            {% endfor %}
+        </table>
+
 
     <br/>
+    <div class="centered"> <!--div 요소는 블록 요소-->
+            <span>  <!--span 요소는 인라인 요소-->
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">이전 페이지</a>
+                {% else %}
+                    첫 페이지
+                {% endif %}
 
-    <div id="content" style="display:inline-block;">
-        <div id="menu">
-            <ul ><!--메뉴 영역-->
-                <li ><a href="#">BRAND</a></li>
-                <li><a href="{% url 'notice:index' %}">NOTICE</a></li>
-                <li><a href="{% url 'qna:index' %}">Q&A</a></li>
-                <li><a href="{% url 'review:index' %}">REVIEW</a></li>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
-            </ul>
+                &nbsp;&nbsp;&nbsp;(&nbsp;
+                {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                &nbsp;)&nbsp;&nbsp;&nbsp;
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">다음 페이지</a>
+                {% else %}
+                    끝 페이지
+                {% endif %}
+            </span>
         </div>
-    </div>
 
 
-
-    <!--이전/현재/다음 페이지 이동 -->
-    <div> <!--div 요소는 블록 요소-->
-        <span>  <!--span 요소는 인라인 요소-->
-            <!--page_obj는 장고 Page 객체가 들어있는 컨텍스트 변수이며
-            has_previous, has_next, previous_page_number, next_page_number,
-            number, pagenator.num_pages 속성을 가짐-->
-            {% if page_obj.has_previous %}
-                <!--링크 형식 href="?page={{ page_obj.previous_page_number }}"에 주목-->
-                <a href="?page={{ page_obj.previous_page_number }}">이전 페이지</a>
-            {% endif %}
-
-            페이지 {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
-
-            {% if page_obj.has_next %}
-                <!--링크 형식 href="?page={{ page_obj.previous_page_number }}"에 주목-->
-                <a href="?page={{ page_obj.next_page_number }}">다음 페이지</a>
-            {% endif %}
-        </span>
-    </div>
-
-    {% block footer %}<!--footer 블록 재정의-->
-        <div id="footer">
-            <p style="text-align:center">상호명 : TEMPUS<br/>
-            대표 : 안수빈<br/>
-            주소 : 서울시 성동구 살곶이길 200<br/>
-            사업자등록번호 : 272-20-00689 <br/>
-            통신판매신고번호 : 제 2018-용인처인-0289-호<br/>
-            tel : 010-4764-3531<br/>
-            개인정보관리책임자 : 안동준 <br/>
-            e-mail : tempus_candle@naver.com<br/>
-            이용약관 개인정보처리방침</p>
-        </div>
-    {% endblock footer %}
 </body>
 </html>

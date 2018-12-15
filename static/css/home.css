@@ -48,6 +48,13 @@ div#products{
     width: 180px;
     height:200px;
 }
+table#brandInfo{
+    border: solid black 1px;
+    margin:auto;
+}
+div#brandInfo p{
+    text-align:center;
+}
 /*푸터 하단고정 need*/
 div#footer{
     /*position: absolute;*/

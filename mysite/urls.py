@@ -1,8 +1,8 @@
 
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.conf.urls.static import static
-from django.conf import settings
+from django.conf.urls.static import static # ch10 1/4
+from django.conf import settings           # ch10 2/4
 from mysite.views import HomeView
 from mysite.views import UserCreateView, UserCreateDoneTV
 
@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^accounts/register/$', UserCreateView.as_view(), name='register'),
     url(r'^accounts/register/done/$', UserCreateDoneTV.as_view(), name='register_done'),
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    url(r'^photo/', include('photo.urls', namespace='photo')),          # ch10 3/4
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)         # ch10 4/4
 

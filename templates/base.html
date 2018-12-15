@@ -42,16 +42,11 @@
 
     <div id="menu">
         <ul ><!--메뉴 영역-->
-            <li ><a href="#">BRAND</a></li>
+            <li ><a href="{% url 'blog:index' %}">BRAND</a></li>
             <li><a href="{% url 'notice:index' %}">NOTICE</a></li>
             <li><a href="{% url 'qna:index' %}">Q&A</a></li>
-            <li><a href="{% url 'review:index' %}">REVIEW</a></li>
-            <li><a href="#">SHOP&bigtriangledown;</a>
-                <ul>
-                    <li><a href="#">캔들</a></li>
-                    <li><a href="#">소모품</a></li>
-                </ul>
-            </li>
+            <li><a href="{% url 'review:index' %}">REVIEW</a></li> <!---->
+            <li><a href="{% url 'photo:index' %}">SHOP</a></li>
             <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
         </ul>
     </div>

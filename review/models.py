@@ -29,7 +29,7 @@ class Review(models.Model):
 	# ThumbnailImageField는 upload_to 옵션으로 저장 위치를 지정
 	# MEDIA_ROOT로 지정된 폴더 하위에 /product/2018/03/과 같은 폴더를 생성하고,
 	# 여기에 업로드된 파일을 자동적으로 저장해줌
-	image = ThumbnailImageField(upload_to='product/%Y/%m')
+	image = ThumbnailImageField(upload_to='review/%Y/%m')
 	description = models.TextField('리뷰 설명', blank=True)
 	# settings.TIME_ZONE = 'Asia/Seoul' 으로 설정해도 UTC 시각으로 처리됨
 	# DB에 저장되는 시각은 UTC 시각이지만, 아래 속성 처리로 한국 시각으로 변환하여 템플릿에 제공함
@@ -42,7 +42,7 @@ class Review(models.Model):
 	# 	return self.created_at.astimezone(korean_timezone)
 
 	class Meta:
-		ordering = ['title']
+		ordering = ['upload_date']
 
 	def __str__(self):
 		return self.title

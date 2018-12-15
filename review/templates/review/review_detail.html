@@ -7,17 +7,18 @@
 
 {% block content %}
 <div id="content">
+
     <h2>{{ object.title }}</h2>
     <table class="review-detail">
         <tr>
             <td>
                 <a href="{{ object.image.url }}">
-                    <img style="max-width:100%" src="{{ object.image.url }}" />
+                    <img style="max-height: 500px; width: auto;" src="{{ object.image.url }}" />
                 </a>
             </td>
             <td>
                 <ul>
-                    <li>설명</li>
+                    <li>리뷰</li>
                     {% if object.description %}
                         <p>{{ object.description|linebreaks }}</p>
                     {% else %}
@@ -32,5 +33,10 @@
             </td>
         </tr>
     </table>
+<br/>                           <!-- ch08 1/5  -->
+<div>                           <!-- ch08 2/5  -->
+    {% load disqus_tags %}      <!-- ch08 3/5  -->
+    {% disqus_show_comments %}  <!-- ch08 4/5  -->
+</div>
 </div>
 {% endblock %}

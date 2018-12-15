@@ -3,7 +3,7 @@ div.product-list {
     margin: 20px 50px;
 }
 
-div.product-list-photo {
+div.product-list-review {
     float: left;
     width: 150px;
     height: 180px;
@@ -20,7 +20,7 @@ div.product-detail-review {
     height: 220px;
 }
 
-div.peoduct-detail-review > li {
+div.product-detail-review > li {
     font-size: 10px;
     font-weight: bold;
     font-style: italic;

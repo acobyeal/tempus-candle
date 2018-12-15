@@ -63,38 +63,28 @@
             <h5><a href="#">[템푸스] 하트병캔들 라벤더</a></h5>
             <h5>22,900원</h5>
         </div>
-        <table id="applist" style="width:55%; height:150px; border:1px; float:left; margin-right:10px; padding:80px" >
-{#            <h4>공지사항</h4>#}
-{#            <tr>#}
-{#                <th>번호</th>#}
-{#                <th>최종 수정일</th>#}
-{#                <th>제목</th>#}
-{#                <th>슬러그</th>#}
-{#                <th>요약</th>#}
-{#            </tr>#}
-            {% for notice in notice_posts %}
-            <tr>
-                <td>{{ notice.id }}</td>
-                <td>{{ notice.modify_date }}</td>
-                <td><a href='{{ notice.get_absolute_url }}'>{{ notice.title }}</a></td>
-                <td>{{ notice.slug }}</td>
-                <td><p>{{ notice.description }}</p></td>
-            </tr>
-            {% endfor %}
-        </table>
-
-    {# 동영상 - 위치를 공지사항이랑 같은 라인에 두고 싶은데 어떻게 해야할지 모르겠음..#}
-    <video  controls style="width:15%; height:200px; border:1px; padding: 10px; float:left;"
+        <br/><br/><br/><br/><br/>
+       <table id="brandInfo">
+           <tr>
+            <td><b><h2> TEMPUS CANDLE은 </h2></b>
+            <p>
+                    <strong>
+                        1. 녹는 양초를 보며 버려지는 촛농을 재사용 할 수는 없을까?  <br/>
+                        2. 여러 소중한 시간을 더욱 값지게 추억을 할 방법이 없을까? <br/>
+                    </strong>
+            </p>
+            <p>
+                    이 두가지 생각으로 부터 시작이 되었습니다. <br/> <br/> <br/>
+            </p>
+        <b><i><u><a href="{% url 'blog:index' %}">브랜드 더 알아보기</a></u></i></b></td>
+           <td><video  controls style="width:300px; height:200px; border:1px; padding: 10px; float:left;"
         poster='{% static 'img/thumbnail.JPG' %}'> {# 동영상 대표이미지(썸네일?)인데, 나중에 사진 변경할 것(그 여자 사진) #}
         <source src="{% static 'videos/tempus candle.mp4' %}">
-    </video>
+         </video></td>
+           </tr>
+    </table>
 
-    {# 리뷰 #}
-    <h4 style="text-align:left; float:left; width:60%; margin: 70px 5px 70px 5px">REVIEW</h4>
-    <div style="float:left; width:30%; margin: 57px 5px 50px 5px">
-        <input type="text" placeholder="Search">
-        <button>검색</button>
-    </div>
+    {# 동영상 - 위치를 공지사항이랑 같은 라인에 두고 싶은데 어떻게 해야할지 모르겠음..#}
 
 
 

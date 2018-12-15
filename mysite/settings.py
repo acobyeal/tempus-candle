@@ -45,7 +45,12 @@ INSTALLED_APPS = [
     'notice.apps.NoticeConfig',          # notice(공지사항)앱 추가 등록
     'qna.apps.QnaConfig',                # qna(Q&A)앱 추가 등록
     'review.apps.ReviewConfig',                # Review(리뷰)앱 추가 등록
+    'photo.apps.PhotoConfig',                  # (ch10) 1/1
+    'disqus',                           # (ch08) 1/4
+    'django.contrib.sites',             # (ch08) 2/4
 ]
+DISQUS_WEBSITE_SHORTNAME = 'acobyeal'   # (ch08) 3/4 [Website Name]
+SITE_ID = 1                             # (ch08) 4/4 django.contrib.sites를 등록할 때 사용하는 값, 임의로 지정하지만, 중복되지 않도록!
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -132,5 +137,3 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]   # 추가 (교과서 40 �
 
 MEDIA_URL = '/media/'                             # 추가 (교과서 40 쪽)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    # 추가 (교과서 40 쪽)
-
-LOGIN_REDIRECT_URL = '/'

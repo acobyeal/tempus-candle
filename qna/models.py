@@ -12,7 +12,7 @@ from django.core.urlresolvers import reverse
 class QnA(models.Model):
     # 아래에서 관리자 화면의 레이블과 도움말은 모두 한글로 수정하였음(교과서에서는 대문자 영문이었음)
     # 한 줄로 입력되는 CharField
-    title = models.CharField('질문 제목', max_length=50)
+    title = models.CharField('질문', max_length=50)
     slug = models.SlugField('슬러그',  # 기본 길이 50, 인덱스가 기본 생성됨,
                                        # 제목에서 주요 단어를 하으픈으로 연결하여 생성
                             unique=True,  # unique 설정, 기본키 대용으로 사용 가능
@@ -29,7 +29,7 @@ class QnA(models.Model):
         verbose_name_plural = '질문 모음'  # 'posts'
         db_table  = 'my_qna'           # DB에 저장할 테이블 이름을 my_posts'라고 지정
                                          # 기본값(앱이름_모델클래스이름)은 'blog_post'
-        ordering  = ('-modify_date',)  # 최종 수정 일시의 내림차순 정렬
+        ordering  = ('id',)  # 최종 수정 일시의 내림차순 정렬
 
     def __str__(self):
         return self.title  # 객체를 출력할 때 제목만 출력
